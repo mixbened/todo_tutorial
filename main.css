@@ -1,0 +1,84 @@
+body {
+    background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Avenir';
+    color: rgb(235, 235, 235);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 3em;
+}
+
+#main {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    /* border: 1px solid white; */
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    width: 100%;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(250, 250, 250);
+    color: #1488CC;
+}
+
+input {
+    width: 80%;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+.input > i {
+    padding: 1em;
+    width: 20%;
+    background: rgba(145, 145, 145, 0.699);
+    color: rgb(235, 235, 235);
+    font-size: 1.2em;
+}
+
+.input > i {
+    background: rgba(145, 145, 145, 0.699);
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+li > span {
+    width: 80%;
+    padding: 1em;
+}
+
+li > i {
+    width: 20%;
+    padding: 1em;
+    background: #1488CC;
+    color: rgb(235, 235, 235)
+}
+
+li > i:hover {
+    background: rgb(20, 136, 204, 0.7);
+    cursor: pointer;
+}
+
+li:nth-child(2) {
+    background: white;
+}
+
+

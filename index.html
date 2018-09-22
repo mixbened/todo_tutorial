@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>This is my To Do App!</h1>
+    <div id="main">
+        <div class="input">
+            <input type="text" id="todoInput"/>
+            <i id='add' class="fas fa-plus"></i>
+        </div>
+        <div class="list">
+            <ul id="list">
+                <li>
+                    <span>Example To Do</span>
+                    <i class="far fa-trash-alt"></i>
+                </li>
+                <li>
+                    <span>Example To Do</span>
+                    <i class="far fa-trash-alt"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var inputText = '';
+        var list = document.getElementById('list')
+        var addButton = document.getElementById('add')
+        var deleteButtons = document.getElementsByClassName('far')
+
+        function getText(){
+            var input = document.getElementById('todoInput');
+            return input
+        }
+
+        function addToList(list, item){
+            var li = document.createElement("li");
+            var span = document.createElement('span')
+            var icon = document.createElement('i')
+            icon.setAttribute("class", "far fa-trash-alt"); // added line
+            span.appendChild(document.createTextNode(item.value));
+            li.appendChild(span);
+            li.appendChild(icon);
+            list.appendChild(li)
+        }
+
+        addButton.addEventListener('click', () => {
+            item = getText()
+            addToList(list, item)
+        })
+
+        // Event Listener for several Items and not existing Items 
+        deleteButtons.addEventListener('click', () => {
+            console.log(this)
+        })
+
+
+
+    </script>
+</body>
+</html>
