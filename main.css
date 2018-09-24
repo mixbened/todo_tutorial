@@ -61,15 +61,8 @@ ul {
 }
 
 li > span {
-    width: 80%;
+    width: 100%;
     padding: 1em;
-}
-
-li > i {
-    width: 20%;
-    padding: 1em;
-    background: #1488CC;
-    color: rgb(235, 235, 235)
 }
 
 li > i:hover {

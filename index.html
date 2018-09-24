@@ -17,13 +17,11 @@
         </div>
         <div class="list">
             <ul id="list">
-                <li>
+                <li class="todo">
                     <span>Example To Do</span>
-                    <i class="far fa-trash-alt"></i>
                 </li>
-                <li>
+                <li class="todo">
                     <span>Example To Do</span>
-                    <i class="far fa-trash-alt"></i>
                 </li>
             </ul>
         </div>
@@ -33,6 +31,7 @@
         var list = document.getElementById('list')
         var addButton = document.getElementById('add')
         var deleteButtons = document.getElementsByClassName('far')
+        var ul = document.getElementById('list')
 
         function getText(){
             var input = document.getElementById('todoInput');
@@ -42,11 +41,8 @@
         function addToList(list, item){
             var li = document.createElement("li");
             var span = document.createElement('span')
-            var icon = document.createElement('i')
-            icon.setAttribute("class", "far fa-trash-alt"); // added line
             span.appendChild(document.createTextNode(item.value));
             li.appendChild(span);
-            li.appendChild(icon);
             list.appendChild(li)
         }
 
@@ -55,10 +51,9 @@
             addToList(list, item)
         })
 
-        // Event Listener for several Items and not existing Items 
-        deleteButtons.addEventListener('click', () => {
-            console.log(this)
-        })
+        // Event Listener for several Items and not existing Items
+        ul.addEventListener('click', function(event){event.target.parentElement.remove()}, false)
+
 
 
 
