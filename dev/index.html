@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+    <!-- THIS IS OUR HTML - solve the 2 Actions -->
+    <h1>This is my To Do App!</h1>
+    <div id="main">
+        <div class="input">
+            <!-- ACTION 1.1) give the Input an ID, maybe 'todoInput' -->
+            <input type="text"/>
+            <i id='add' class="fas fa-plus"></i>
+        </div>
+        <div class="list">
+            <ul id="list">
+                <li class="todo">
+                    <span>Example To Do</span>
+                </li>
+                <!-- ACTION 1.2) create a second Todo to see how it will show up -->
+            </ul>
+        </div>
+    </div>
+    <script>
+        // +++THIS IS THE SCRIPT - solve the 3 Actions+++
+
+        var list = document.getElementById('list');
+        var addButton = document.getElementById('add');
+        var ul = document.getElementById('list');
+        // ACTION 2.1) grab the input by its ID (you can check it out in the Console)
+        // var input =
+        console.log('This is the Element you grabbed: ', input)
+
+
+        // --- Add Todo to List ---
+
+        function addToList(item){
+            var li = document.createElement("li");
+            var span = document.createElement('span')
+            span.appendChild(document.createTextNode(item.value));
+            li.appendChild(span);
+            list.appendChild(li)
+        };
+
+        // Event Listener on 'Add'-Button - this Event Listener should call the addToList function
+        addButton.addEventListener('click', () => {
+            // ACTION 2.2) call the addToList-function with the input as Parameter
+
+        });
+
+
+        // --- Delete Todos ---
+
+        // Event Listener on Item - this Event Listener should remove the Todo Element from the Dom
+        ul.addEventListener('click', function(event){
+            var element = event.target.parentElement
+            // ACTION 2.3) call the remove Method on 'element', to remove it on a Click
+        }, false);
+
+    // Bonus: include jQuery and make it easier by rewriting the functionality
+    </script>
+</body>
+</html>

@@ -21,16 +21,14 @@
                     <span>Example To Do</span>
                 </li>
                 <li class="todo">
-                    <span>Example To Do</span>
+                    <span>Example To Do II</span>
                 </li>
             </ul>
         </div>
     </div>
     <script>
-        var inputText = '';
         var list = document.getElementById('list')
         var addButton = document.getElementById('add')
-        var deleteButtons = document.getElementsByClassName('far')
         var ul = document.getElementById('list')
 
         function getText(){
@@ -38,7 +36,7 @@
             return input
         }
 
-        function addToList(list, item){
+        function addToList(item){
             var li = document.createElement("li");
             var span = document.createElement('span')
             span.appendChild(document.createTextNode(item.value));
@@ -48,7 +46,7 @@
 
         addButton.addEventListener('click', () => {
             item = getText()
-            addToList(list, item)
+            addToList(item)
         })
 
         // Event Listener for several Items and not existing Items
